@@ -1,0 +1,1 @@
+import '@card-settlement/ui/styles.css';import type {Metadata} from 'next';export const metadata:Metadata={title:'Card Settlement Rail — Design Preview',description:'Internal component preview'};export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}
