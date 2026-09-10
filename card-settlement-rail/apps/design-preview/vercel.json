@@ -1,1 +1,1 @@
-{"framework":"nextjs","buildCommand":"pnpm --filter @card-settlement/design-preview build","installCommand":"pnpm install --frozen-lockfile","devCommand":"pnpm --filter @card-settlement/design-preview dev"}
+{"framework":"nextjs","buildCommand":"pnpm --filter @card-settlement/design-preview build","installCommand":"pnpm install","devCommand":"pnpm --filter @card-settlement/design-preview dev"}
