@@ -1,0 +1,4 @@
+{
+  "type":"record","name":"SettlementCompleted","namespace":"card.settlement.events.v1",
+  "fields":[{"name":"settlementId","type":"string"},{"name":"batchId","type":"string"},{"name":"amountMinor","type":"string"},{"name":"currency","type":"string"},{"name":"settledAt","type":"string"},{"name":"reference","type":"string"}]
+}

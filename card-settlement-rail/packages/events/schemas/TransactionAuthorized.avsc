@@ -1,0 +1,4 @@
+{
+  "type":"record","name":"TransactionAuthorized","namespace":"card.settlement.events.v1",
+  "fields":[{"name":"transactionId","type":"string"},{"name":"merchantId","type":"string"},{"name":"acquirerId","type":"string"},{"name":"issuerId","type":"string"},{"name":"amountMinor","type":"string"},{"name":"currency","type":"string"},{"name":"authorizationCode","type":"string"}]
+}

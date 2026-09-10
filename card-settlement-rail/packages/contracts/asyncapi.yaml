@@ -1,0 +1,8 @@
+asyncapi: 3.0.0
+info:
+  title: Card Settlement Rail Events
+  version: 0.1.0
+channels: {}
+components:
+  schemas: {}
+x-event-catalog: {}

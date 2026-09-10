@@ -1,0 +1,11 @@
+{
+  "name": "@card-settlement/testing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./dist/index.js", "./fixtures": "./dist/fixtures.js", "./harness": "./dist/harness.js" },
+  "types": "./dist/index.d.ts",
+  "scripts": { "build": "tsc -p tsconfig.json" },
+  "dependencies": { "@card-settlement/domain": "workspace:*", "@card-settlement/events": "workspace:*" },
+  "devDependencies": { "typescript": "^5.7.2" }
+}

@@ -1,0 +1,4 @@
+{
+  "type":"record","name":"BatchSubmitted","namespace":"card.settlement.events.v1",
+  "fields":[{"name":"batchId","type":"string"},{"name":"acquirerId","type":"string"},{"name":"transactionIds","type":{"type":"array","items":"string"}},{"name":"totalAmountMinor","type":"string"},{"name":"currency","type":"string"},{"name":"submittedAt","type":"string"}]
+}

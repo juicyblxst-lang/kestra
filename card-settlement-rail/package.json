@@ -1,0 +1,7 @@
+{
+  "name": "card-settlement-rail",
+  "private": true,
+  "packageManager": "pnpm@9.15.5",
+  "scripts": { "build": "turbo run build", "test": "turbo run test", "typecheck": "turbo run build", "format": "prettier --write ." },
+  "devDependencies": { "prettier": "^3.4.2", "turbo": "^2.3.3" }
+}
