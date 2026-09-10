@@ -1,0 +1,1 @@
+import * as React from 'react';export function LoadingState({label='Loading',rows=3}:{label?:string;rows?:number}){return <div role="status" aria-label={label} aria-busy="true" className="space-y-3 p-4">{Array.from({length:rows},(_,i)=><div key={i} className="h-10 animate-pulse rounded bg-finance-100"/> )}</div>}

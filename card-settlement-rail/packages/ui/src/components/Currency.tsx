@@ -1,0 +1,3 @@
+import * as React from 'react';import {Money,CURRENCY_MINOR_UNITS,type Currency} from '@card-settlement/domain';
+export function Currency({money,locale='en-US',showCode=true,className}:{money:Money;locale?:string;showCode?:boolean;className?:string}){const digits=CURRENCY_MINOR_UNITS[money.currency];const amount=Number(money.minor)/(10**digits);const formatted=new Intl.NumberFormat(locale,{style:'currency',currency:money.currency,minimumFractionDigits:digits,maximumFractionDigits:digits,currencyDisplay:showCode?'code':'symbol'}).format(amount);return <span className={className}>{formatted}</span>}
+export function currencyFromMinor(minor:bigint,currency:Currency){const r=Money.fromMinor(minor,currency);if(!r.ok)throw new Error(r.error.message);return r.value}
