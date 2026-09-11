@@ -28,7 +28,8 @@
     },
     "plugins": ["expo-router", "expo-notifications", "expo-local-authentication"],
     "extra": {
-      "router": { "origin": false }
+      "router": { "origin": false },
+      "apiUrl": ""
     }
   }
 }
