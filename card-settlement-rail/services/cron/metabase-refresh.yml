@@ -1,0 +1,21 @@
+name: Metabase Refresh
+on:
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh Metabase dashboards
+        if: ${{ vars.ENABLE_METABASE_REFRESH == 'true' }}
+        env:
+          METABASE_URL: ${{ secrets.METABASE_URL }}
+          METABASE_API_KEY: ${{ secrets.METABASE_API_KEY }}
+        run: |
+          test -n "$METABASE_URL"
+          test -n "$METABASE_API_KEY"
+          curl --fail-with-body --silent --show-error \
+            -X POST "$METABASE_URL/api/collection/root/items" \
+            -H "X-API-Key: $METABASE_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d '{"description":"manual refresh marker"}'
