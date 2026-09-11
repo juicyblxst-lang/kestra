@@ -1,0 +1,22 @@
+[
+  {"id":"OFAC-001","name":"ALEXEI IVANOV","dob":"1974-03-12","country":"RU","list":"OFAC-SDN"},
+  {"id":"OFAC-002","name":"FARID HASSAN","dob":"1968-11-04","country":"SY","list":"OFAC-SDN"},
+  {"id":"OFAC-003","name":"MOHAMMAD ALI KHALIL","dob":"1979-06-21","country":"LB","list":"OFAC-SDN"},
+  {"id":"OFAC-004","name":"SAMIR HADDAD","dob":"1971-02-18","country":"SY","list":"OFAC-SDN"},
+  {"id":"UN-005","name":"ABDUL RAHMAN ALI","dob":"1965-09-30","country":"YE","list":"UN"},
+  {"id":"UN-006","name":"IBRAHIM OSMAN","dob":"1976-01-15","country":"SO","list":"UN"},
+  {"id":"EU-007","name":"SERGEI PETROV","dob":"1982-05-09","country":"RU","list":"EU-CONSOLIDATED"},
+  {"id":"EU-008","name":"NATALIA SOKOLOVA","dob":"1977-12-22","country":"BY","list":"EU-CONSOLIDATED"},
+  {"id":"EU-009","name":"OMAR EL MASRI","dob":"1970-08-17","country":"EG","list":"EU-CONSOLIDATED"},
+  {"id":"UK-010","name":"KARIM BEN SALEM","dob":"1969-04-03","country":"TN","list":"UK-SANCTIONS"},
+  {"id":"UK-011","name":"DANIEL OKORO","dob":"1980-10-11","country":"NG","list":"UK-SANCTIONS"},
+  {"id":"UK-012","name":"MUSA ABDULLAHI","dob":"1973-07-28","country":"NG","list":"UK-SANCTIONS"},
+  {"id":"OFAC-013","name":"HASSAN RAHIMI","dob":"1962-03-06","country":"IR","list":"OFAC-SDN"},
+  {"id":"OFAC-014","name":"MEHDI REZAEI","dob":"1981-09-14","country":"IR","list":"OFAC-SDN"},
+  {"id":"UN-015","name":"KHALID MAHMOUD","dob":"1975-11-19","country":"IQ","list":"UN"},
+  {"id":"EU-016","name":"PETR NOVAK","dob":"1966-06-25","country":"CZ","list":"EU-CONSOLIDATED"},
+  {"id":"EU-017","name":"ANNA KOWALSKA","dob":"1984-02-10","country":"PL","list":"EU-CONSOLIDATED"},
+  {"id":"UK-018","name":"MICHAEL ADEYEMI","dob":"1978-08-01","country":"NG","list":"UK-SANCTIONS"},
+  {"id":"OFAC-019","name":"YUSUF IBRAHIM","dob":"1967-05-16","country":"LY","list":"OFAC-SDN"},
+  {"id":"UN-020","name":"AHMED ABDULRAHMAN","dob":"1972-01-27","country":"SD","list":"UN"}
+]
