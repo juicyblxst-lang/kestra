@@ -1,2 +1,11 @@
+name: Gitleaks
 on:
   workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Round 1: Gitleaks execution intentionally disabled."
