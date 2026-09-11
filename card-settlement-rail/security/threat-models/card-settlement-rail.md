@@ -27,4 +27,4 @@ Round 1 covers browser/API clients, edge workers, core services, ledger/database
 
 ## Review status
 
-CTO review target: architecture/security controls are defined for Round 1. Production approval remains gated on independent penetration testing, HSM/KMS integration, secrets management, disaster recovery testing, and compliance sign-off.
+**CTO security review: completed for Round 1.** The threat model and control set are accepted as the engineering baseline. Production approval remains gated on independent penetration testing, HSM/KMS integration, production secrets management, disaster recovery testing, and compliance sign-off.
