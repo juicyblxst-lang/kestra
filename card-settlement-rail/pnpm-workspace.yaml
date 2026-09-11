@@ -2,5 +2,7 @@ packages:
   - 'packages/domain'
   - 'packages/ui'
   - 'packages/compliance'
+  - 'packages/config'
+  - 'packages/observability'
   - 'apps/design-preview'
   - 'services/core'
