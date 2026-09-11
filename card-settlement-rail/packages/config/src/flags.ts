@@ -1,5 +1,4 @@
 import { z } from "zod";
-import { parseEnv } from "./env.js";
 
 export type FeatureFlags = Record<string, boolean>;
 const schema = z.record(z.boolean());
