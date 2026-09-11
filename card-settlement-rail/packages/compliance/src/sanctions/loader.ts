@@ -1,5 +1,4 @@
-import { readFileSync } from "node:fs";
-import { fileURLToPath } from "node:url";
+import fixture from "../../fixtures/sanctions-mini.json";
 
 export interface SanctionsEntity {
   id: string;
@@ -14,8 +13,6 @@ export interface SanctionsIndex {
   byCountry: ReadonlyMap<string, readonly SanctionsEntity[]>;
   byFirstLetter: ReadonlyMap<string, readonly SanctionsEntity[]>;
 }
-
-const fixtureUrl = new URL("../../fixtures/sanctions-mini.json", import.meta.url);
 
 function normalize(value: string): string {
   return value.trim().toUpperCase();
@@ -39,9 +36,8 @@ function parseEntities(raw: unknown): SanctionsEntity[] {
   });
 }
 
-export function loadSanctionsFixture(path = fileURLToPath(fixtureUrl)): SanctionsIndex {
-  const parsed = JSON.parse(readFileSync(path, "utf8")) as unknown;
-  const entities = parseEntities(parsed);
+export function loadSanctionsFixture(raw: unknown = fixture): SanctionsIndex {
+  const entities = parseEntities(raw);
   const byCountry = new Map<string, SanctionsEntity[]>();
   const byFirstLetter = new Map<string, SanctionsEntity[]>();
 
