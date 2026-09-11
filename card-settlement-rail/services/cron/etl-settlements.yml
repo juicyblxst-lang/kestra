@@ -1,0 +1,16 @@
+name: ETL Settlements
+on:
+  workflow_dispatch:
+
+jobs:
+  etl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate ETL contract
+        run: |
+          test -f data/warehouse/dbt_project.yml
+          test -f data/warehouse/models/staging/stg_settlements.sql
+      - name: Run settlement ETL
+        if: ${{ vars.ENABLE_PRODUCTION_ETL == 'true' }}
+        run: echo "Production ETL requires explicit environment configuration."
