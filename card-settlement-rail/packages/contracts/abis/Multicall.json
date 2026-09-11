@@ -1,0 +1,3 @@
+[
+  {"type":"function","name":"multicall","stateMutability":"payable","inputs":[{"name":"data","type":"bytes[]","internalType":"bytes[]"}],"outputs":[{"name":"results","type":"bytes[]","internalType":"bytes[]"}]}
+]

@@ -1,2 +1,26 @@
+name: Contract CI
+
 on:
   workflow_dispatch:
+
+jobs:
+  contract-ci:
+    if: ${{ github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: card-settlement-rail/contracts
+    steps:
+      - uses: actions/checkout@v4
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: stable
+      - name: Build
+        run: forge build
+      - name: Test
+        run: forge test
+      - name: Slither
+        uses: crytic/slither-action@v0.4.1
+        with:
+          target: card-settlement-rail/contracts
+          fail-on: high

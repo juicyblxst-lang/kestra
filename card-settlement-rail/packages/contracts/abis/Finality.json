@@ -1,0 +1,6 @@
+[
+  {"type":"function","name":"attested","stateMutability":"view","inputs":[{"name":"","type":"bytes32","internalType":"bytes32"}],"outputs":[{"name":"","type":"bool","internalType":"bool"}]},
+  {"type":"function","name":"finalityProof","stateMutability":"view","inputs":[{"name":"","type":"bytes32","internalType":"bytes32"}],"outputs":[{"name":"attestor","type":"address","internalType":"address"},{"name":"timestamp","type":"uint64","internalType":"uint64"}]},
+  {"type":"function","name":"attestFinality","stateMutability":"nonpayable","inputs":[{"name":"settlementId","type":"bytes32","internalType":"bytes32"}],"outputs":[]},
+  {"type":"event","name":"FinalityAttested","anonymous":false,"inputs":[{"name":"settlementId","type":"bytes32","indexed":true,"internalType":"bytes32"},{"name":"attestor","type":"address","indexed":true,"internalType":"address"},{"name":"timestamp","type":"uint256","indexed":false,"internalType":"uint256"}]}
+]

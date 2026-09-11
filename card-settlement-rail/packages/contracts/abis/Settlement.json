@@ -1,0 +1,6 @@
+[
+  {"type":"constructor","inputs":[{"name":"operator_","type":"address","internalType":"address"}]},
+  {"type":"function","name":"operator","stateMutability":"view","inputs":[],"outputs":[{"name":"","type":"address","internalType":"address"}]},
+  {"type":"function","name":"settle","stateMutability":"nonpayable","inputs":[{"name":"nettingRoot","type":"bytes32","internalType":"bytes32"},{"name":"counterparties","type":"address[]","internalType":"address[]"},{"name":"amounts","type":"int256[]","internalType":"int256[]"}],"outputs":[{"name":"","type":"bool","internalType":"bool"}]},
+  {"type":"event","name":"SettlementCompleted","anonymous":false,"inputs":[{"name":"nettingRoot","type":"bytes32","indexed":true,"internalType":"bytes32"},{"name":"counterparties","type":"address[]","indexed":false,"internalType":"address[]"},{"name":"amounts","type":"int256[]","indexed":false,"internalType":"int256[]"},{"name":"timestamp","type":"uint256","indexed":false,"internalType":"uint256"}]}
+]

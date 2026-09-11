@@ -1,0 +1,11 @@
+[
+  {"type":"constructor","inputs":[{"name":"operator_","type":"address","internalType":"address"}]},
+  {"type":"function","name":"operator","stateMutability":"view","inputs":[],"outputs":[{"name":"","type":"address","internalType":"address"}]},
+  {"type":"function","name":"reserves","stateMutability":"view","inputs":[{"name":"","type":"address","internalType":"address"}],"outputs":[{"name":"","type":"uint256","internalType":"uint256"}]},
+  {"type":"function","name":"depositReserve","stateMutability":"payable","inputs":[{"name":"account","type":"address","internalType":"address"}],"outputs":[]},
+  {"type":"function","name":"releaseReserve","stateMutability":"nonpayable","inputs":[{"name":"account","type":"address","internalType":"address"},{"name":"amount","type":"uint256","internalType":"uint256"}],"outputs":[]},
+  {"type":"function","name":"slashReserve","stateMutability":"nonpayable","inputs":[{"name":"account","type":"address","internalType":"address"},{"name":"recipient","type":"address","internalType":"address"},{"name":"amount","type":"uint256","internalType":"uint256"},{"name":"reason","type":"bytes32","internalType":"bytes32"}],"outputs":[]},
+  {"type":"event","name":"ReserveDeposited","anonymous":false,"inputs":[{"name":"account","type":"address","indexed":true,"internalType":"address"},{"name":"amount","type":"uint256","indexed":false,"internalType":"uint256"}]},
+  {"type":"event","name":"ReserveReleased","anonymous":false,"inputs":[{"name":"account","type":"address","indexed":true,"internalType":"address"},{"name":"recipient","type":"address","indexed":true,"internalType":"address"},{"name":"amount","type":"uint256","indexed":false,"internalType":"uint256"}]},
+  {"type":"event","name":"ReserveSlashed","anonymous":false,"inputs":[{"name":"account","type":"address","indexed":true,"internalType":"address"},{"name":"recipient","type":"address","indexed":true,"internalType":"address"},{"name":"amount","type":"uint256","indexed":false,"internalType":"uint256"},{"name":"reason","type":"bytes32","indexed":true,"internalType":"bytes32"}]}
+]

@@ -1,0 +1,6 @@
+[
+  {"type":"constructor","inputs":[{"name":"operator_","type":"address","internalType":"address"}]},
+  {"type":"function","name":"operator","stateMutability":"view","inputs":[],"outputs":[{"name":"","type":"address","internalType":"address"}]},
+  {"type":"function","name":"recordInterchange","stateMutability":"nonpayable","inputs":[{"name":"acquirer","type":"address","internalType":"address"},{"name":"issuer","type":"address","internalType":"address"},{"name":"amount","type":"uint256","internalType":"uint256"}],"outputs":[{"name":"interchangeId","type":"bytes32","internalType":"bytes32"}]},
+  {"type":"event","name":"InterchangeRecorded","anonymous":false,"inputs":[{"name":"interchangeId","type":"bytes32","indexed":true,"internalType":"bytes32"},{"name":"acquirer","type":"address","indexed":true,"internalType":"address"},{"name":"issuer","type":"address","indexed":true,"internalType":"address"},{"name":"amount","type":"uint256","indexed":false,"internalType":"uint256"},{"name":"timestamp","type":"uint256","indexed":false,"internalType":"uint256"}]}
+]
