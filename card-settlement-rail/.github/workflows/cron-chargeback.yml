@@ -1,2 +1,11 @@
+name: Chargeback Cron
 on:
   workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  chargeback:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Round 1: chargeback scheduling intentionally disabled."
