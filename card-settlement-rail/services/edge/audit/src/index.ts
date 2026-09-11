@@ -1,0 +1,5 @@
+import { Hono } from 'hono';
+type Env={Bindings:{SUPABASE_URL?:string;SUPABASE_SERVICE_KEY?:string;AUDIT_BUCKET?:R2Bucket}};
+const app=new Hono<Env>();app.get('/health',c=>c.json({service:'audit',status:'ok'}));
+app.post('/audit',async c=>{const body=await c.req.json<Record<string,unknown>>().catch(()=>null);if(!body)return c.json({error:'invalid_json'},400);if(!c.env.SUPABASE_URL||!c.env.SUPABASE_SERVICE_KEY)return c.json({error:'supabase_not_configured'},503);const eventId=crypto.randomUUID();const record={id:eventId,created_at:new Date().toISOString(),payload:body};const u=new URL('/rest/v1/audit_log',c.env.SUPABASE_URL);const r=await fetch(u,{method:'POST',headers:{apikey:c.env.SUPABASE_SERVICE_KEY,authorization:`Bearer ${c.env.SUPABASE_SERVICE_KEY}`,'content-type':'application/json','prefer':'return=minimal'},body:JSON.stringify(record)});if(!r.ok)return c.json({error:'audit_write_failed'},502);if(c.env.AUDIT_BUCKET)await c.env.AUDIT_BUCKET.put(`audit/${eventId}.json`,JSON.stringify(record),{httpMetadata:{contentType:'application/json'}});return c.json({id:eventId},201);});
+export default app;
