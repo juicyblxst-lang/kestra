@@ -1,0 +1,23 @@
+app = "card-settlement-metabase"
+primary_region = "iad"
+
+[build]
+  image = "metabase/metabase:v0.51.12"
+
+[env]
+  MB_JETTY_REQUEST_HEADER_SIZE = "8192"
+  MB_JETTY_RESPONSE_HEADER_SIZE = "8192"
+  JAVA_OPTS = "-Xms256m -Xmx768m"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+[[vm]]
+  memory = "1gb"
+  cpu_kind = "shared"
+  cpus = 1
