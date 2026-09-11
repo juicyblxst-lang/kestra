@@ -1,0 +1,3 @@
+"use client";
+import { useAccount,useConnect,useDisconnect } from "wagmi";
+export function useWallet(){const account=useAccount();const {connectors,connect,isPending}=useConnect();const {disconnect}=useDisconnect();return {...account,connectors,isPending,connect:(connector=connectors[0])=>connector&&connect({connector}),disconnect}}
