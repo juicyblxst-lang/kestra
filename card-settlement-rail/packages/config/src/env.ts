@@ -4,6 +4,7 @@ const url = z.string().url();
 const secret = z.string().min(1);
 const token = z.string().min(16);
 const privateKey = z.string().regex(/^0x[0-9a-fA-F]{64}$/);
+const address = z.string().regex(/^0x[0-9a-fA-F]{40}$/);
 const rate = z.coerce.number().min(0).max(1).default(1);
 
 const base = z.object({
@@ -29,10 +30,13 @@ const blockchain = {
   ARBITRUM_SEPOLIA_RPC_URL: url.default("https://arb-sepolia.g.alchemy.com/v2/test-placeholder-key-12345678901234567890"),
   POLYGON_AMOY_RPC_URL: url.default("https://polygon-amoy.g.alchemy.com/v2/test-placeholder-key-12345678901234567890"),
   OPTIMISM_SEPOLIA_RPC_URL: url.default("https://opt-sepolia.g.alchemy.com/v2/test-placeholder-key-12345678901234567890"),
+  PRIVATE_KEY: privateKey.optional(),
   OPERATOR_PRIVATE_KEY: privateKey.optional(),
   OPERATOR_PRIVATE_KEY_TESTNET_ONLY: privateKey.optional(),
   DEPLOYER_PRIVATE_KEY: privateKey.optional(),
   ORACLE_PRIVATE_KEY: privateKey.optional(),
+  OPERATOR: address.optional(),
+  ORACLE: address.optional(),
 };
 
 const auth = {
@@ -42,7 +46,7 @@ const auth = {
   EIP712_DOMAIN_NAME: z.string().min(1).default("CardSettlementRail"),
   EIP712_DOMAIN_VERSION: z.string().min(1).default("1"),
   EIP712_DOMAIN_CHAIN_ID: z.coerce.number().int().positive().default(84532),
-  EIP712_DOMAIN_VERIFYING_CONTRACT: z.string().regex(/^0x[0-9a-fA-F]{40}$/).default("0x0000000000000000000000000000000000000001"),
+  EIP712_DOMAIN_VERIFYING_CONTRACT: address.default("0x0000000000000000000000000000000000000001"),
 };
 
 const integrations = {
