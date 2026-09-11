@@ -1,0 +1,14 @@
+name: card_settlement_rail
+version: '1.0.0'
+config-version: 2
+profile: card_settlement_rail
+model-paths: [models]
+seed-paths: [../../seeds]
+test-paths: [tests]
+models:
+  card_settlement_rail:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+      +on_schema_change: sync_all_columns
