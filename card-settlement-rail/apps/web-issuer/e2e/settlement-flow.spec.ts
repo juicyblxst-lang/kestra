@@ -1,0 +1,2 @@
+import {test,expect} from "@playwright/test";
+test("settlement flow shell",async({page})=>{await page.goto("/");await expect(page.getByText("CARD SETTLEMENT RAIL")).toBeVisible()});
