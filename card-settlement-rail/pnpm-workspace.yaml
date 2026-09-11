@@ -1,5 +1,6 @@
 packages:
   - 'packages/domain'
   - 'packages/ui'
+  - 'packages/compliance'
   - 'apps/design-preview'
   - 'services/core'
