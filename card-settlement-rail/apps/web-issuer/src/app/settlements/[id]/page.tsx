@@ -1,0 +1,1 @@
+export default function Page({params}:{params:{id:string}}){return <main className="p-8 space-y-6"><p className="text-sm text-sky-400">SETTLEMENT</p><h1 className="text-2xl font-semibold">Settlement {params.id}</h1><p className="text-slate-400">Detail is resolved from the core API at runtime.</p></main>}
