@@ -29,9 +29,9 @@ function parseEntities(raw: unknown): SanctionsEntity[] {
     return {
       id: item.id,
       name: normalize(item.name),
-      dob: typeof item.dob === "string" ? item.dob : undefined,
-      country: typeof item.country === "string" ? normalize(item.country) : undefined,
       list: item.list,
+      ...(typeof item.dob === "string" ? { dob: item.dob } : {}),
+      ...(typeof item.country === "string" ? { country: normalize(item.country) } : {}),
     };
   });
 }
