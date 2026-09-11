@@ -6,7 +6,6 @@ on:
 jobs:
   update-sanctions:
     runs-on: ubuntu-latest
-    if: ${{ false }}
     steps:
       - uses: actions/checkout@v4
-      - run: echo "Live sanctions ingestion is intentionally disabled in Round 1."
+      - run: echo "Live sanctions ingestion is intentionally disabled in Round 1; this workflow is manual-only."
