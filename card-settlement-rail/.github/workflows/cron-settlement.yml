@@ -1,2 +1,11 @@
+name: Settlement Cron
 on:
   workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  settlement:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Round 1: settlement scheduling intentionally disabled."
