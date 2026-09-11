@@ -1,2 +1,11 @@
+name: CD Contracts
 on:
   workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  deploy-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Round 1: contract deployment intentionally disabled."
