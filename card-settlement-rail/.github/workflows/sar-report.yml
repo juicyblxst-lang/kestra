@@ -1,0 +1,11 @@
+name: SAR report preparation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sar-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "SAR preparation is manual-only and intentionally not connected to filing systems in Round 1."
