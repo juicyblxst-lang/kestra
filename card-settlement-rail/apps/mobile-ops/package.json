@@ -13,6 +13,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.62.11",
     "@walletconnect/react-native-compat": "^2.17.1",
+    "@wagmi/connectors": "^5.7.7",
     "expo": "~52.0.46",
     "expo-constants": "~17.0.8",
     "expo-linking": "~7.0.5",
