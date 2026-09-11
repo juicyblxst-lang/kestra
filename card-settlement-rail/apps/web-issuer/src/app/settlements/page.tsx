@@ -1,0 +1,2 @@
+import {KpiGrid} from "../../components/kpi-grid";
+export default function Page(){return <main className="p-8 space-y-6"><h1 className="text-2xl font-semibold">Settlements</h1><KpiGrid items={[{label:"Records",value:"—"},{label:"Pending",value:"—"},{label:"Completed",value:"—"},{label:"Exceptions",value:"—"}]}/></main>}
