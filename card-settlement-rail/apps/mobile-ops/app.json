@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Card Settlement Ops",
+    "slug": "card-settlement-ops",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "cardsettlement",
+    "userInterfaceStyle": "automatic",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B1020"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cardsettlement.ops",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Use Face ID to authorize sensitive operations."
+      }
+    },
+    "android": {
+      "package": "com.cardsettlement.ops",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B1020"
+      }
+    },
+    "plugins": ["expo-router", "expo-notifications", "expo-local-authentication"],
+    "extra": {
+      "router": { "origin": false }
+    }
+  }
+}
