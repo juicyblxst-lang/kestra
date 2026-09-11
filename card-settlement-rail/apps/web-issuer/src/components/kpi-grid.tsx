@@ -1,0 +1,1 @@
+export function KpiGrid({items}:{items:Array<{label:string;value:string}>}){return <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">{items.map(i=><article key={i.label} className="rounded-xl border border-slate-800 bg-slate-900 p-5"><p className="text-sm text-slate-400">{i.label}</p><p className="mt-2 text-2xl font-semibold">{i.value}</p></article>)}</section>}
