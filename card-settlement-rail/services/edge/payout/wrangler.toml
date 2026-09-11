@@ -1,0 +1,6 @@
+name = "card-settlement-payout"
+main = "src/index.ts"
+compatibility_date = "2026-09-10"
+workers_dev = true
+# Bindings are intentionally named only in Round 1; credentials/resources are supplied at deployment time.
+# Required env names: QSTASH_URL, QSTASH_TOKEN, CORE_BASE_URL

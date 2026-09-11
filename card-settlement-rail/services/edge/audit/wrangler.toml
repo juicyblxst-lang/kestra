@@ -1,0 +1,5 @@
+name = "card-settlement-audit"
+main = "src/index.ts"
+compatibility_date = "2026-09-10"
+workers_dev = true
+# Binding name: AUDIT_BUCKET. Required env names: SUPABASE_URL, SUPABASE_SERVICE_KEY

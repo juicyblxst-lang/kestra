@@ -6,5 +6,7 @@ packages:
   - 'packages/observability'
   - 'packages/auth'
   - 'packages/crypto'
+  - 'packages/sdk-node'
+  - 'packages/sdk-python'
   - 'apps/design-preview'
   - 'services/core'

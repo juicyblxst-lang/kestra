@@ -1,11 +1,5 @@
-# Bug Bounty — Funded Phase Placeholder
+# Bug Bounty
 
-A public bug-bounty program is intentionally not enabled in Round 1.
+Round 1 placeholder. A funded program will define scope, severity, safe-harbor terms, response SLAs, and payout bands before public launch.
 
-Funded phase requirements:
-- define scope and out-of-scope assets;
-- publish severity and reward policy;
-- provide safe-harbor language;
-- establish triage SLAs and disclosure rules;
-- fund rewards and security response capacity;
-- route reports into tracked remediation and regression tests.
+Do not submit real customer data, credentials, private keys, or destructive proof-of-concept activity.

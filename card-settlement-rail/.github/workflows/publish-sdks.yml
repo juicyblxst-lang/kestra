@@ -1,2 +1,13 @@
+name: Publish SDKs
+
 on:
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Round 1: SDK publishing intentionally disabled."

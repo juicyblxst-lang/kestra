@@ -1,0 +1,5 @@
+name = "card-settlement-indexer"
+main = "src/index.ts"
+compatibility_date = "2026-09-10"
+workers_dev = true
+# Required env names: CHAIN_RPC_URL, SUPABASE_URL, SUPABASE_SERVICE_KEY, INDEXER_CONTRACT_ADDRESS, INDEXER_EVENT_TOPIC
