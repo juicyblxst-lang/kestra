@@ -1,0 +1,21 @@
+name: dbt Warehouse Run
+on:
+  workflow_dispatch:
+
+jobs:
+  dbt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dbt
+        run: pip install dbt-postgres
+      - name: Validate project
+        working-directory: data/warehouse
+        run: dbt parse --profiles-dir .
+      - name: Run dbt
+        if: ${{ vars.ENABLE_PRODUCTION_ETL == 'true' }}
+        working-directory: data/warehouse
+        run: dbt run --profiles-dir .
