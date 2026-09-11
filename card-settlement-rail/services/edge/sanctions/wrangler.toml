@@ -1,0 +1,10 @@
+name = "card-settlement-sanctions"
+main = "src/index.ts"
+compatibility_date = "2026-09-10"
+workers_dev = true
+
+[vars]
+SANCTIONS_INDEX = "static-fixture"
+
+[observability]
+enabled = true
