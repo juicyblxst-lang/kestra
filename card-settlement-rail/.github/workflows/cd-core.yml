@@ -1,2 +1,11 @@
+name: CD Core
 on:
   workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  deploy-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Round 1: core deployment intentionally disabled."
