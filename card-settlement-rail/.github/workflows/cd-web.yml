@@ -1,2 +1,11 @@
+name: CD Web
 on:
   workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  deploy-web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Round 1: web deployment intentionally disabled."
