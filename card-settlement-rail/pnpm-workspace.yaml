@@ -15,4 +15,5 @@ packages:
   - 'apps/web-merchant'
   - 'apps/web-compliance'
   - 'apps/web-reconciliation'
+  - 'apps/mobile-ops'
   - 'services/core'
