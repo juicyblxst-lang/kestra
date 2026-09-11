@@ -4,5 +4,7 @@ packages:
   - 'packages/compliance'
   - 'packages/config'
   - 'packages/observability'
+  - 'packages/auth'
+  - 'packages/crypto'
   - 'apps/design-preview'
   - 'services/core'
