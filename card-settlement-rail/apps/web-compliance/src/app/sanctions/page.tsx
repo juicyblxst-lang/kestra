@@ -1,0 +1,1 @@
+import {KpiGrid} from "../../components/kpi-grid"; export default function Page(){return <main className="p-8 space-y-6"><h1 className="text-2xl font-semibold">Sanctions</h1><KpiGrid items={[{label:"Screened",value:"—"},{label:"Matches",value:"—"},{label:"Cleared",value:"—"},{label:"Escalated",value:"—"}]}/></main>}

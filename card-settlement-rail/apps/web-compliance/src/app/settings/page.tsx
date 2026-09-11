@@ -1,0 +1,1 @@
+export default function Page(){return <main className="p-8 space-y-6"><h1 className="text-2xl font-semibold">Settings</h1><p className="text-slate-400">Compliance configuration is supplied through deployment environment variables.</p></main>}
