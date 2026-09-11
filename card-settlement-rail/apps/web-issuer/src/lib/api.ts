@@ -1,0 +1,4 @@
+import { CardSettlementClient } from "@card-settlement/sdk-node";
+const baseUrl=process.env.NEXT_PUBLIC_API_URL||"/api";
+export const sdk=new CardSettlementClient({baseUrl});
+export const api={sdk,async get<T>(path:string){const r=await fetch(`${baseUrl}${path}`,{cache:"no-store"});if(!r.ok)throw new Error(`API request failed (${r.status})`);return r.json() as Promise<T>}};
