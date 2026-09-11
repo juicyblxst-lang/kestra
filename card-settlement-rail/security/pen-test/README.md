@@ -1,11 +1,5 @@
-# Penetration Testing — Funded Phase Placeholder
+# Penetration Testing
 
-Round 1 contains no funded external penetration test.
+Round 1 placeholder. Funded-phase testing will cover API authorization, payment/ledger invariants, edge workers, webhook replay, SDKs, infrastructure, secrets handling, and smart-contract boundaries.
 
-Before production/mainnet:
-- commission an independent application/API/cloud penetration test;
-- test authorization, settlement idempotency, replay, chargeback abuse, oracle manipulation, and key boundaries;
-- retest all critical/high findings;
-- retain signed reports and remediation evidence.
-
-Do not treat this placeholder as evidence of security testing.
+No live target, credentials, or external scanning is used in Round 1. Results and remediation evidence will be recorded here after an authorized independent engagement.
