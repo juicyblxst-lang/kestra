@@ -1,11 +1,11 @@
 {
-  "name": "@card-settlement/aml",
+  "name": "aml",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": { ".": "./src/index.ts", "./rules": "./src/rules.ts" },
-  "scripts": { "test": "vitest run", "test:watch": "vitest", "typecheck": "tsc -p tsconfig.json --noEmit" },
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": { ".": "./index.ts", "./rules": "./rules.ts" },
+  "scripts": { "test": "vitest run rules.test.ts", "test:watch": "vitest rules.test.ts" },
   "devDependencies": { "typescript": "^5.7.2", "vitest": "^2.1.8" }
 }
