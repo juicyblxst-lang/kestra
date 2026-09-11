@@ -1,0 +1,2 @@
+export type Settlement={id:string;status:string;amount:string;currency:string;merchant?:string};
+export function SettlementCard({settlement}:{settlement:Settlement}){return <article className="rounded-xl border border-slate-800 bg-slate-900 p-5"><p className="font-mono text-xs text-slate-500">{settlement.id}</p><h3 className="mt-1 text-lg font-semibold">{settlement.amount} {settlement.currency}</h3><span className="text-xs uppercase">{settlement.status}</span>{settlement.merchant&&<p className="mt-2 text-sm text-slate-400">{settlement.merchant}</p>}</article>}
