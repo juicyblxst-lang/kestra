@@ -4,6 +4,7 @@ pragma solidity 0.8.24;
 library SignatureChecker {
     bytes4 internal constant ERC1271_MAGICVALUE = 0x1626ba7e;
     bytes32 internal constant DOMAIN_TYPEHASH = keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)");
+    uint256 internal constant SECP256K1N_HALF = 0x7fffffffffffffffffffffffffffffff5d576e7357a4501ddfe92f46681b20a0;
 
     error InvalidSignatureLength();
     error InvalidSignature();
@@ -38,6 +39,7 @@ library SignatureChecker {
         }
         if (v < 27) v += 27;
         if (v != 27 && v != 28) revert InvalidSignature();
+        if (uint256(s) == 0 || uint256(s) > SECP256K1N_HALF) revert InvalidSignature();
         signer = ecrecover(digest, v, r, s);
         if (signer == address(0)) revert InvalidSignature();
     }
@@ -65,6 +67,7 @@ library SignatureChecker {
         }
         if (v < 27) v += 27;
         if (v != 27 && v != 28) return (address(0), false);
+        if (uint256(s) == 0 || uint256(s) > SECP256K1N_HALF) return (address(0), false);
         signer = ecrecover(digest, v, r, s);
         return (signer, signer != address(0));
     }
