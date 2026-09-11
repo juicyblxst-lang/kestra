@@ -8,6 +8,7 @@ packages:
   - 'packages/crypto'
   - 'packages/sdk-node'
   - 'packages/sdk-python'
+  - 'packages/aml'
   - 'apps/design-preview'
   - 'apps/web-acquirer'
   - 'apps/web-issuer'
