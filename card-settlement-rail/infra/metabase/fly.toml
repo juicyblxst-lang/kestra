@@ -5,9 +5,14 @@ primary_region = "iad"
   image = "metabase/metabase:v0.51.12"
 
 [env]
+  MB_DB_TYPE = "postgres"
+  MB_DB_PORT = "5432"
   MB_JETTY_REQUEST_HEADER_SIZE = "8192"
   MB_JETTY_RESPONSE_HEADER_SIZE = "8192"
   JAVA_OPTS = "-Xms256m -Xmx768m"
+
+# Configure MB_DB_DBNAME, MB_DB_USER, MB_DB_PASS and MB_DB_HOST through Fly secrets/env
+# before deployment. No production credentials belong in this repository.
 
 [http_service]
   internal_port = 3000
