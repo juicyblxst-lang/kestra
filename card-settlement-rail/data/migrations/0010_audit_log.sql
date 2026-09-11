@@ -15,8 +15,10 @@ CREATE INDEX IF NOT EXISTS audit_log_resource_idx ON audit_log(resource_type, re
 CREATE INDEX IF NOT EXISTS audit_log_actor_idx ON audit_log(actor_id, created_at DESC);
 CREATE OR REPLACE FUNCTION audit_log_compute_hash() RETURNS trigger LANGUAGE plpgsql AS $$
 BEGIN
-  IF NEW.previous_hash = repeat('0',64) AND EXISTS (SELECT 1 FROM audit_log ORDER BY id DESC LIMIT 1) THEN
+  PERFORM pg_advisory_xact_lock(hashtext('card-settlement-rail:audit-log'));
+  IF NEW.previous_hash = repeat('0',64) THEN
     SELECT entry_hash INTO NEW.previous_hash FROM audit_log ORDER BY id DESC LIMIT 1;
+    NEW.previous_hash := coalesce(NEW.previous_hash, repeat('0',64));
   END IF;
   NEW.entry_hash := encode(digest(
     concat_ws('|', NEW.event_id::text, coalesce(NEW.actor_id::text,''), NEW.actor_type, NEW.action,
