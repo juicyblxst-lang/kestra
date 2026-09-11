@@ -1,0 +1,1 @@
+import {KpiGrid} from "../../components/kpi-grid"; export default function Page(){return <main className="p-8 space-y-6"><h1 className="text-2xl font-semibold">Exceptions</h1><KpiGrid items={[{label:"Open",value:"—"},{label:"Investigating",value:"—"},{label:"Resolved",value:"—"},{label:"Escalated",value:"—"}]}/></main>}

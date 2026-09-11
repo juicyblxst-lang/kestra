@@ -1,0 +1,1 @@
+import {KpiGrid} from "../../components/kpi-grid"; export default function Page(){return <main className="p-8 space-y-6"><h1 className="text-2xl font-semibold">Reports</h1><KpiGrid items={[{label:"Daily",value:"—"},{label:"Weekly",value:"—"},{label:"Monthly",value:"—"},{label:"Exceptions",value:"—"}]}/></main>}
