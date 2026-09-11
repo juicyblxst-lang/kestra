@@ -1,0 +1,12 @@
+appId: com.cardsettlement.ops
+---
+- launchApp
+- assertVisible: "Ops console"
+- tapOn: "Settlements"
+- assertVisible: "Settlement"
+- back
+- tapOn: "Alerts →"
+- assertVisible: "Alerts"
+- back
+- tapOn: "Settings →"
+- assertVisible: "Settings"
