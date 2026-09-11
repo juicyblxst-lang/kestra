@@ -25,7 +25,7 @@ export function jaroWinkler(left: string, right: string): number {
   if (a === b) return 1;
   if (!a || !b) return 0;
 
-  const distance = Math.floor(Math.max(a.length, b.length) / 2) - 1;
+  const distance = Math.max(0, Math.floor(Math.max(a.length, b.length) / 2) - 1);
   const aMatches = new Array<boolean>(a.length).fill(false);
   const bMatches = new Array<boolean>(b.length).fill(false);
   let matches = 0;
@@ -41,13 +41,14 @@ export function jaroWinkler(left: string, right: string): number {
   }
   if (matches === 0) return 0;
 
-  const aChars = a.filter((_, i) => aMatches[i]);
-  const bChars = b.filter((_, i) => bMatches[i]);
+  const aChars = a.split("").filter((_, i) => aMatches[i]);
+  const bChars = b.split("").filter((_, i) => bMatches[i]);
   let transpositions = 0;
   for (let i = 0; i < aChars.length; i++) if (aChars[i] !== bChars[i]) transpositions++;
 
   const jaro = (matches / a.length + matches / b.length + (matches - transpositions / 2) / matches) / 3;
-  const prefix = Math.min(4, [...a].findIndex((char, i) => char !== b[i]) === -1 ? Math.min(a.length, b.length) : [...a].findIndex((char, i) => char !== b[i]));
+  let prefix = 0;
+  while (prefix < 4 && prefix < a.length && prefix < b.length && a[prefix] === b[prefix]) prefix++;
   return jaro > 0.7 ? jaro + prefix * 0.1 * (1 - jaro) : jaro;
 }
 
