@@ -1,0 +1,19 @@
+{
+  "name": "@card-settlement/auth",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": { "test": "vitest run", "typecheck": "tsc --noEmit" },
+  "dependencies": {
+    "@casl/ability": "^6.7.3",
+    "fastify": "^5.2.1",
+    "hono": "^4.7.2",
+    "jose": "^6.0.10"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.9"
+  }
+}
